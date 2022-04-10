@@ -1,0 +1,90 @@
+.subquery
+	background: url(../public/images/bg-subquery.svg)
+	background-position: 200px 50px
+	.page-title 
+		font-size: 4em 
+		font-family: Inter
+		background: linear-gradient(45deg,#4388DD,#FF4581)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		width: fit-content
+		margin: auto
+		font-weight: bold
+		padding-top: 20px
+	.overlay-text
+		cursor: pointer
+		color: #fff;
+		//background-color: rgba(0, 0, 0, 0.3)
+		//font-size: 5em
+		font-family: Inter
+	.game-container
+		margin-top: 20px
+	.game-info-container
+		padding: 30px 20px
+		font-family: Inter
+		display: inline-block
+	.game-info
+		font-size: 1em
+		color: #000
+		float: left
+		background-image: url(../public/images/outline_alarm_black_48.png)
+		background-position: 10px 25px
+		background-repeat: no-repeat
+		min-width: 150px
+		border-radius: 2px
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+		padding: 10px 20px 10px 70px
+		&:last-child
+			float: right
+			background-image: url(../public/images/outline_flip_black_48.png)
+	#time-remaining, #flips
+		display: block;
+		font-size: 3em
+	.cob-web
+		display: none;
+	.card
+		height: 125px
+		cursor: pointer
+		&.matched
+			cursor: not-allowed
+			--border-width: 3px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 125px;
+			height: 125px;
+			font-family: Lato, sans-serif;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			color: white;
+			&:after 
+				position: absolute;
+				content: "";
+				top: calc(-1 * var(--border-width));
+				left: calc(-1 * var(--border-width));
+				z-index: -1;
+				width: calc(100% + var(--border-width) * 2);
+				height: calc(100% + var(--border-width) * 2);
+				background: linear-gradient( 60deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+				background-size: 300% 300%;
+				background-position: 0 50%;
+				border-radius: 10px;
+				animation: moveGradient 4s alternate infinite;
+			.card-front 
+				border: 
+				.card-value 
+					animation: none
+	.card-face
+		border: none
+		border-radius: 10px
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+		background: none
+	.card-back
+		&:hover 
+			.spider 
+				transform: scale(1.1)
+	.spider,.card-value
+		object-fit: cover
+		overflow: hidden
+		transform: none
