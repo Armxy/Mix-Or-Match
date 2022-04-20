@@ -1,4 +1,5 @@
 import Express from "express";
+import compression from 'compression';
 
 const app = Express();
 const port = process.env.PORT || 3000;
@@ -27,6 +28,7 @@ switch(setting){
         break;
 }
 
+app.use(compression());
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 app.use(Express.static('public'));
